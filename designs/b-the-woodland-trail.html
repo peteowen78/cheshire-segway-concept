@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cheshire Segway: The Woodland Trail (direction B) (concept)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1F3A2C;--moss:#4F7A3A;--fern:#8DAA5B;--bracken:#B5602C;--paper:#F2EDE1;--sand:#E4D9C2;--ink:#1A1F1A;--mute:#55604F}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.04rem/1.6 "Work Sans",system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;letter-spacing:-.01em;margin:0}
+.eyebrow{font:600 .78rem/1 "Work Sans";letter-spacing:.16em;text-transform:uppercase;color:var(--bracken);margin:0 0 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:600 1rem/1 "Work Sans";text-decoration:none;padding:16px 22px;border-radius:6px;border:2px solid var(--forest)}
+.btn-dark{background:var(--forest);color:var(--paper)}
+.btn-line{background:transparent;color:var(--forest)}
+.btn-bracken{background:var(--bracken);border-color:var(--bracken);color:#fff}
+
+/* header */
+.top{position:absolute;left:0;right:0;top:0;z-index:5}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--forest)}
+.logo svg{flex:none}
+.logo b{font:400 1.35rem/1 "Young Serif";display:block}
+.logo small{font:600 .68rem/1 "Work Sans";letter-spacing:.2em;text-transform:uppercase;color:var(--moss)}
+.nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:.95rem;background:rgba(242,237,225,.94);padding:10px 18px;border-radius:8px}
+.nav a{text-decoration:none}
+.nav .tel{font-weight:700}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);min-height:min(820px,100vh)}
+.hero .txt{padding:110px 56px 48px max(28px,calc((100vw - 1240px)/2 + 28px));display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper) repeating-radial-gradient(circle at 10% 110%,transparent 0 26px,rgba(79,122,58,.09) 26px 27px)}
+.hero h1{font-size:clamp(2.6rem,4.6vw,4.1rem);line-height:1.02;color:var(--forest);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--bracken)}
+.hero .lede{font-size:1.15rem;max-width:40ch;color:var(--mute);margin:0 0 26px}
+.ticket{background:#fff;border:1px solid var(--sand);border-radius:10px;padding:8px;max-width:520px;box-shadow:0 16px 40px -28px rgba(31,58,44,.6)}
+.opt{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 16px;border-radius:6px;text-decoration:none}
+.opt+.opt{border-top:1px dashed var(--sand)}
+.opt b{font:400 1.2rem/1.2 "Young Serif";color:var(--forest)}
+.opt span{color:var(--mute);font-size:.93rem}
+.opt .p{grid-row:1/3;grid-column:2;align-self:center;text-align:right;font:400 1.6rem/1 "Young Serif";color:var(--forest)}
+.opt .p small{display:block;font:500 .75rem/1.4 "Work Sans";color:var(--mute)}
+.opt:hover{background:var(--paper)}
+.ticket .ctas{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px}
+.hero .pic{position:relative;background:#3a5a3a}
+.hero .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero .pic figcaption{position:absolute;left:24px;bottom:24px;background:rgba(31,58,44,.88);color:var(--paper);padding:10px 14px;border-radius:6px;font-size:.88rem;max-width:300px}
+
+/* trail */
+.trail{background:var(--forest);color:var(--paper);padding:88px 0}
+.trail .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+.trail h2{font-size:clamp(2rem,3.8vw,3.2rem);line-height:1.05;margin-bottom:16px}
+.trail p{color:#C9D6C4;max-width:44ch}
+.stops{list-style:none;margin:28px 0 0;padding:0}
+.stops li{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:12px 0;border-top:1px solid rgba(242,237,225,.16)}
+.stops .n{width:34px;height:34px;border-radius:50%;background:var(--paper);color:var(--forest);display:grid;place-content:center;font:400 1.05rem "Young Serif"}
+.stops b{font:400 1.15rem/1.3 "Young Serif";display:block}
+.stops span{color:#C9D6C4;font-size:.95rem}
+.map{background:#24442F;border-radius:14px;padding:18px;position:relative;
+  background-image:repeating-radial-gradient(ellipse at 70% 40%,transparent 0 22px,rgba(141,170,91,.12) 22px 23px)}
+.map svg{width:100%;height:auto;display:block}
+
+/* routes */
+.sec{padding:88px 0}
+.sec h2{font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.05;color:var(--forest);margin-bottom:12px}
+.routes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:36px}
+.route{background:#fff;border:1px solid var(--sand);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.route .ph{aspect-ratio:16/9}
+.strip{background-image:url(https://cheshiresegway.com/wp-content/uploads/2023/03/Woodland-Glide-horiz-trial-.png);background-repeat:no-repeat;background-size:307% auto;background-position:var(--x,0%) var(--y,17.6%)}
+.multi{background-image:url(https://cheshiresegway.com/wp-content/uploads/2023/03/Multi-Activity.png);background-repeat:no-repeat;background-size:var(--s,210%) auto;background-position:var(--x,0%) var(--y,0%)}
+.route .body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1}
+.route h3{font-size:1.75rem;color:var(--forest)}
+.route .meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin:10px 0 14px;font-weight:600;color:var(--moss);font-size:.95rem}
+.route .cost{font:400 2.2rem/1 "Young Serif";color:var(--forest);margin:auto 0 16px}
+.route .cost small{font:500 .9rem "Work Sans";color:var(--mute)}
+.route .ctas{display:flex;flex-wrap:wrap;gap:10px}
+.duo{display:grid;grid-template-columns:1fr 1fr}
+
+/* gift */
+.gift{background:var(--sand);padding:88px 0}
+.gift .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.card{background:var(--forest);color:var(--paper);border-radius:14px;padding:34px;aspect-ratio:1.6/1;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;box-shadow:0 30px 50px -30px rgba(0,0,0,.6);transform:rotate(-2deg);max-width:500px}
+.card:after{content:"";position:absolute;right:-60px;top:-60px;width:240px;height:240px;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 12px,rgba(141,170,91,.28) 12px 13px)}
+.card b{font:400 1.9rem/1.1 "Young Serif"}
+.card small{color:#C9D6C4;letter-spacing:.14em;text-transform:uppercase;font-weight:600;font-size:.72rem}
+.gift ul{padding-left:20px;margin:16px 0 24px}
+.gift li{margin:4px 0}
+
+/* know */
+.know{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:30px;border-top:2px solid var(--forest)}
+.know div{padding:22px 22px 22px 0;border-bottom:1px solid var(--sand)}
+.know h3{font-size:1.2rem;color:var(--forest);margin-bottom:6px}
+.know p{margin:0;color:var(--mute);font-size:.97rem}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:36px;margin-top:30px}
+.quotes blockquote{margin:0;font:400 1.4rem/1.35 "Young Serif";color:var(--forest)}
+.quotes blockquote:first-child{font-size:1.9rem}
+.quotes cite{display:block;font:600 .85rem "Work Sans";font-style:normal;color:var(--bracken);margin-top:12px;letter-spacing:.06em;text-transform:uppercase}
+
+/* groups / find */
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.box{border:1px solid var(--sand);background:#fff;border-radius:12px;padding:34px}
+.box h2{font-size:clamp(1.8rem,3vw,2.4rem)}
+.addr{font:400 1.25rem/1.45 "Young Serif";color:var(--forest)}
+footer{background:var(--ink);color:#CFD3C8;padding:46px 0 120px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer small{display:block;max-width:70ch;margin-top:14px;color:#9AA295}
+
+.bar{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .top{position:relative;background:var(--paper)}
+  .top .wrap{padding-top:12px;padding-bottom:12px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero .pic{order:-1;height:250px}
+  .hero .pic img{object-position:50% 12%}
+  .hero .pic figcaption{display:none}
+  .hero .txt{padding:24px 20px 40px}
+  .hero h1{font-size:clamp(2.2rem,10vw,3rem);margin-bottom:12px}
+  .hero .lede{font-size:1rem;margin-bottom:18px}
+  .trail .wrap,.gift .wrap,.routes,.pair{grid-template-columns:1fr}
+  .know{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .sec,.trail,.gift{padding:60px 0}
+  .bar{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--sand);z-index:20;box-shadow:0 -10px 24px -18px rgba(0,0,0,.5)}
+  .bar .btn{padding:13px 10px;font-size:.95rem}
+}
+@media (max-width:480px){
+  .wrap{padding:0 16px}
+  .hero .txt{padding:20px 16px 36px}
+  .ticket .ctas{grid-template-columns:1fr}
+  .know{grid-template-columns:1fr}
+  .box{padding:24px 20px}
+  .card{padding:24px}
+  .card b{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+<div style="background:#17201B;color:#fff;font:500 14px/1.4 system-ui,sans-serif;padding:9px 20px;position:relative;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;z-index:2147483000"><span style="display:inline-flex;align-items:center;gap:8px"><svg style="height:12px;width:auto;color:#fff" viewBox="0 0 487.5 208.5" role="img" aria-label="Pete Owen Design logo"><path fill="currentColor" d="M487.5,10.6h-41.2v15.5c-15.3-10.6-33.9-16.8-53.8-16.8-30.1,0-57,14.1-74.4,36-17.4-21.9-44.3-36-74.4-36s-57,14.1-74.4,36c-17.4-21.9-44.3-36-74.4-36C44.8,9.4,3.8,48,0,96.9h-.3v100.3h41.2v-14.5c15.3,10.6,33.9,16.8,53.8,16.8,30.1,0,57-14.1,74.4-36,17.4,21.9,44.3,36,74.4,36s57-14.1,74.4-36c17.4,21.9,44.3,36,74.4,36,52.4,0,95.1-42.6,95.1-95.1s0-1.3,0-1.9h0V10.6h0ZM94.6,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM243.5,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8ZM392.4,158.2c-29.7,0-53.8-24.2-53.8-53.8s24.2-53.8,53.8-53.8,53.8,24.2,53.8,53.8-24.2,53.8-53.8,53.8Z"/></svg> Design idea by Pete Owen Design. Not the live Cheshire Segway website.</span><a href="../index.html" style="color:#fff;font-weight:700">Back to the start</a></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Cheshire Segway home">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#1F3A2C"/><path d="M8 30 C 14 22, 20 34, 26 24 S 34 16, 37 14" stroke="#F2EDE1" stroke-width="2.4" fill="none" stroke-dasharray="3 3" stroke-linecap="round"/><path d="M28 10 l4 7 h-8z M28 15 l5 8 h-10z" fill="#8DAA5B"/><circle cx="37" cy="14" r="2.6" fill="#B5602C"/></svg>
+      <span><b>Cheshire Segway</b><small>Gliding fun!</small></span>
+    </a>
+    <nav class="nav"><a href="#trail">The trail</a><a href="#routes">Prices</a><a href="#gift">Gift vouchers</a><a href="#groups">Groups</a><a href="#find">Find us</a><a class="tel" href="tel:01606882223">01606 882223</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="txt">
+    <p class="eyebrow">Blakemere Village, near Northwich</p>
+    <h1>Glide through <em>15 acres</em> of Cheshire woodland.</h1>
+    <p class="lede">Guided off-road Segway sessions on our own woodland trail, all year round. Full training first, then into the trees.</p>
+    <div class="ticket">
+      <a class="opt" href="#routes"><b>Woodland Glide</b><span>1 hour · age 10+ · minimum 2</span><span class="p">£35<small>per person</small></span></a>
+      <a class="opt" href="#routes"><b>Multi Activity</b><span>3½ hours · falconry, archery, air rifles, Segway · 14+</span><span class="p">£99<small>per person</small></span></a>
+      <div class="ctas"><a class="btn btn-dark" href="#routes">Find a date</a><a class="btn btn-line" href="#gift">Give it as a gift</a></div>
+    </div>
+  </div>
+  <figure class="pic" style="margin:0">
+    <img src="https://cheshiresegway.com/wp-content/uploads/2023/03/Segway-girl-.png" alt="A young rider on a Segway on a woodland track among the ferns">
+    <figcaption>The woodland trail at Blakemere Village</figcaption>
+  </figure>
+</section>
+
+<section class="trail" id="trail">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" style="color:var(--fern)">Your hour, step by step</p>
+      <h2>Five stops between your first wobble and the see-saw.</h2>
+      <p>Your instructor decides when you are ready for each stage, and tailors the woodland route to the group.</p>
+      <ol class="stops">
+        <li><span class="n">1</span><div><b>Practice area</b><span>Meet the Segway X2 and learn to lean, steer and stop.</span></div></li>
+        <li><span class="n">2</span><div><b>Training course</b><span>A slalom to build confidence before rougher ground.</span></div></li>
+        <li><span class="n">3</span><div><b>The bridge</b><span>Cross over into the woods.</span></div></li>
+        <li><span class="n">4</span><div><b>The woodland</b><span>Undulating, fully off-road tracks through 15 acres.</span></div></li>
+        <li><span class="n">5</span><div><b>The see-saw</b><span>One last test of balance on the way back.</span></div></li>
+      </ol>
+    </div>
+    <div class="map" aria-label="Illustrated map of the trail">
+      <svg viewBox="0 0 600 460" role="img" aria-label="Trail map: practice area, training course, bridge, woodland, see-saw">
+        <g fill="#8DAA5B" opacity=".55">
+          <path d="M330 70 l14 26 h-28z M330 88 l18 30 h-36z"/><path d="M400 120 l12 22 h-24z M400 136 l16 26 h-32z"/><path d="M480 80 l14 26 h-28z M480 98 l18 30 h-36z"/><path d="M520 200 l12 22 h-24z M520 216 l16 26 h-32z"/><path d="M430 250 l14 26 h-28z M430 268 l18 30 h-36z"/><path d="M360 300 l12 22 h-24z M360 316 l16 26 h-32z"/><path d="M500 320 l14 26 h-28z M500 338 l18 30 h-36z"/><path d="M300 180 l12 22 h-24z M300 196 l16 26 h-32z"/>
+        </g>
+        <path d="M60 390 C 120 390, 110 330, 150 320 S 210 350, 230 300 S 190 240, 250 220 L 290 214 C 340 205, 360 160, 420 170 S 520 160, 520 250 S 420 300, 400 360 S 250 400, 200 400" fill="none" stroke="#F2EDE1" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+        <rect x="262" y="206" width="38" height="16" rx="3" fill="#B5602C"/>
+        <g font-family="Young Serif, Georgia, serif" font-size="17" fill="#1F3A2C">
+          <circle cx="60" cy="390" r="17" fill="#F2EDE1"/><text x="54" y="396">1</text>
+          <circle cx="190" cy="330" r="17" fill="#F2EDE1"/><text x="184" y="336">2</text>
+          <circle cx="281" cy="214" r="17" fill="#F2EDE1"/><text x="275" y="220">3</text>
+          <circle cx="470" cy="170" r="17" fill="#F2EDE1"/><text x="464" y="176">4</text>
+          <circle cx="200" cy="400" r="17" fill="#F2EDE1"/><text x="194" y="406">5</text>
+        </g>
+        <g font-family="Work Sans, sans-serif" font-size="14" fill="#C9D6C4" font-weight="600">
+          <text x="34" y="430">Practice area</text><text x="140" y="300">Slalom</text><text x="228" y="188">Bridge</text><text x="440" y="140">15 acre woodland</text><text x="226" y="438">See-saw</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="routes">
+  <div class="wrap">
+    <p class="eyebrow">Prices</p>
+    <h2>Two ways into the woods</h2>
+    <div class="routes">
+      <article class="route">
+        <div class="ph strip" style="--x:100%;--y:25%" role="img" aria-label="Four riders on Segways on a woodland path"></div>
+        <div class="body">
+          <h3>Woodland Glide</h3>
+          <div class="meta"><span>1 hour</span><span>Age 10+</span><span>Minimum 2, up to 6 per tour</span></div>
+          <p>Training, the slalom, the woodland tracks and the see-saw. Safety equipment provided.</p>
+          <p class="cost">£35 <small>per person</small></p>
+          <div class="ctas"><a class="btn btn-dark" href="#">Find a date</a><a class="btn btn-line" href="#gift">Gift voucher</a></div>
+        </div>
+      </article>
+      <article class="route">
+        <div class="ph duo"><div class="multi" style="--s:240%;--x:12%;--y:15%" role="img" aria-label="A barn owl in flight"></div><div class="multi" style="--s:240%;--x:100%;--y:100%" role="img" aria-label="A boy at archery"></div></div>
+        <div class="body">
+          <h3>Multi Activity</h3>
+          <div class="meta"><span>3½ hours</span><span>Age 14+</span></div>
+          <p>1½ hours of falconry with the birds of prey, 1 hour on the Segways, and 1 hour of archery and air rifles.</p>
+          <p class="cost">£99 <small>per person</small></p>
+          <div class="ctas"><a class="btn btn-dark" href="#">Find a date</a><a class="btn btn-line" href="#gift">Gift voucher</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gift" id="gift">
+  <div class="wrap">
+    <div class="card"><small>Gift voucher</small><b>A woodland glide,<br>for someone special</b><small>Cheshire Segway · valid 12 months</small></div>
+    <div>
+      <p class="eyebrow">Gift vouchers</p>
+      <h2 style="font-size:clamp(2rem,3.8vw,3.1rem);color:var(--forest);line-height:1.05">A present they can step onto.</h2>
+      <ul>
+        <li>A gift card posted first class on the day you buy</li>
+        <li>Or an e-voucher to print, or email with your own message</li>
+        <li>For an experience, or for any amount</li>
+        <li>Valid for 12 months; they choose the date</li>
+      </ul>
+      <a class="btn btn-bracken" href="#">Buy a gift voucher</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow">Before you come</p>
+    <h2>Good to know</h2>
+    <div class="know">
+      <div><h3>Age and weight</h3><p>Age 10+ for the Woodland Glide, 14+ for Multi Activity. Riders 45kg to 177kg (7.1 to 18½ stone).</p></div>
+      <div><h3>What to wear</h3><p>Comfortable clothes for the weather and secure shoes: trainers or walking boots. No flip-flops, sandals or heels.</p></div>
+      <div><h3>Weather</h3><p>We run all year. If rain, snow or ice make it unsafe we will rebook you.</p></div>
+      <div><h3>Times</h3><p>Tours from 9.30am to 4pm in winter and 9.30am to 6pm in summer.</p></div>
+      <div><h3>Bringing someone?</h3><p>1 or 2 spectators per rider, and plenty to do at Blakemere Village.</p></div>
+      <div><h3>Training</h3><p>Full training is included. Nobody goes into the woods until the instructor is happy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Riders say</p>
+    <div class="quotes">
+      <blockquote>"Segways very good fun. Thoroughly enjoyable. Through forest. Fast"<cite>Fred P</cite></blockquote>
+      <blockquote>"The instructors were brilliant and they offer lots of activities."<cite>Victoria H, school visit</cite></blockquote>
+      <blockquote>"Staff are experienced, thoughtful and very helpful."<cite>Katrina M</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap pair">
+    <div class="box" id="groups">
+      <p class="eyebrow">Groups</p>
+      <h2>Parties, schools and teams</h2>
+      <p>Private parties, school visits and corporate team building, with tailor-made packages and group discounts. Call us to plan it.</p>
+      <a class="btn btn-dark" href="tel:01606882223">Call 01606 882223</a>
+    </div>
+    <div class="box" id="find">
+      <p class="eyebrow">Find us</p>
+      <p class="addr">Blakemere Village Craft Centre<br>Sandiway, Northwich, Cheshire CW8 2EB</p>
+      <p>On-site parking for over 150 vehicles. M56 junction 10 then 9 miles on the A49, or M6 junction 19 then 11 miles on the A556. Cuddington station is less than a mile away.</p>
+      <p style="margin-bottom:0"><a href="tel:01606882223">01606 882223</a> · <a href="mailto:info@cheshireoutdoors.uk">info@cheshireoutdoors.uk</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b style="font:400 1.3rem 'Young Serif';color:var(--paper)">Cheshire Segway</b><br>Part of the Cheshire Outdoors Group</div>
+    <div>
+      <p style="margin:0">Concept design by Pete Owen Design. Not the live Cheshire Segway website.</p>
+      <small>Direction B, The Woodland Trail. Headlines are proposed copy; "Gliding fun!" is their own line. Prices, times, rules, route stages, address and reviews are taken from cheshiresegway.com; reviews are shortened quotes. The trail map is illustrative, not the real layout. Photos are Cheshire Segway's own current photos, cropped; a new photo shoot would be needed. Buttons do not book anything.</small>
+    </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions"><a class="btn btn-dark" href="#routes">Find a date</a><a class="btn btn-line" href="#gift">Gift voucher</a><a class="btn btn-line" href="tel:01606882223">Call</a></nav>
+</body>
+</html>
